@@ -1,12 +1,13 @@
 \documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Control de impresión de fecha de vencimiento} 
+\titulo{Inteligencia artificial para el control de calidad de fechas de caducidad} 
+
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
 %\posgrado{Carrera de Especialización en Internet de las Cosas} 
-\posgrado{Carrera de Especialización en Intelegencia Artificial}
+\posgrado{Carrera de Especialización en Inteligencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
@@ -86,7 +87,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de la correcta impresión de la fecha de caducidad en paquetes de bebida powerade/jugos cepita de la marca Coca-Cola, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{black}{\$60000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de la correcta impresión de la fecha de caducidad en paquetes de bebida powerade/jugos cepita de la marca Coca-Cola, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{black}{\$200000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -112,9 +113,9 @@ Se adjunta a esta acta la planificación inicial.
 %\begin{consigna}{Red}
 En la fábrica de Coca-Cola es muy importante el control de calidad, dados los avances en la velocidad de las líneas de producción (actualmente se embotellan un millón de botellas en una de las líneas de producción en 24hs) muchos controles se realizan utilizando procesamiento de imágenes tradicionales.	Estos controles funcionan muy bien pero son muy sensibles a pequeños cambios en las condiciones del entorno, como variaciones de luz, el color de la tapa de la botella, una pequeña suciedad en la lente, o que la botella tenga una pequeña variación en su altura, lo que genera falsos rechazos y tener que hacer cambios constantemente en los parámetros de calibración (en algunos casos se crea un formato por cada color de tapa, uno por cada sabor y por cada tamaño de botella). 
 
-La propuesta busca crear una solucion mas efectiva utilizando algoridmos de inteligencia artificial para el control de calidad de botellas o paquetes, comenzado por realizar el control de la correcta impresion de la fecha de vencimiento en los paquetes de distintos formatos de bebidas como cepita o powerade.
+La propuesta busca crear una solución mas efectiva utilizando algoritmos de inteligencia artificial para el control de calidad de botellas o paquetes, comenzado por realizar el control de la correcta impresión de la fecha de vencimiento en los paquetes de distintos formatos de bebidas como Cepita o Powerade.
 
-Como se observa en el diagrama en bloques del sistema, en la figura 1, se utilizará un sistema embebido optimizado para el uso de inteligencia artificial para procesar las imágenes tomadas por la cámara, creando en una primera etapa una base de datos para luego entrenar el sistema para determinar si la fecha de vencimiento cumple los estandares de calidad necesarios, enviado una señal de alerta o detención del proceso de producción si fuese necesario.
+Como se observa en el diagrama en bloques del sistema, en la figura 1, se utilizará un sistema embebido optimizado para el uso de inteligencia artificial para procesar las imágenes tomadas por la cámara, creando en una primera etapa una base de datos para luego entrenar el sistema para determinar si la fecha de vencimiento cumple los estándares de calidad necesarios, enviado una señal de alerta o detención del proceso de producción si fuese necesario. Lo que se busca es que la fecha de vencimiento sea legible y que la misma sea correcta siendo 150 días o 180 días, según el producto.
 
 %Para esto se utilizara un sistema embebido y una cámara para el procesamiento de las imágenes de los paquetes determinar si la fecha de vencimiento cumple los estandares de calidad necesario y alertando o deteniendo el proceso de produccion si fuese necesario.
 
@@ -124,11 +125,11 @@ El dispositivo se comunicará con el PLC (Controlador lógico programable) encar
 
 \begin{itemize}
 \item Operativo, (sin detección de paquetes mal etiquetados).
-\item Alarma (detección de una botella sin etiqueta en los últimos 30 segundos).
-\item Fallo (detección de más de una botella sin etiqueta en los últimos 30 segundos).
+\item Alarma (detección de un paquete con fecha de vencimiento no legible o incorrecta en los últimos 30 segundos).
+\item Fallo (detección de mas de un paquete con fecha de vencimiento no legible o incorrecta en los últimos 30 segundos).
 \end{itemize}
 
-El sistema debe funcionar con diferentes condiciones de iluminación durante el día y la noche y con deferentes formatos como por ejemplo jugos cepita 500ml, 1,5l, powerade 500ml y formatos similares. 
+El sistema debe funcionar con diferentes condiciones de iluminación durante el día y la noche y con deferentes formatos como por ejemplo jugos Cepita 500ml, 1,5l, Powerade 500ml y formatos similares. 
 
 %La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en %bloques del sistema }y una frase como la siguiente: ``En la Figura 
 %\ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se %observa que...''. Luego recién más abajo de haber puesto esta frase se pone la %figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas %en el texto, porque sino el lector no entiende por qué de pronto aparece una %figura.
@@ -168,7 +169,7 @@ El sistema debe funcionar con diferentes condiciones de iluminación durante el 
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 %Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
+Cliente       & \clientename      &\empclientename	& Supervisor  	\\ \hline
 %Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & UTN Frc        	& Alumno 	\\ \hline
 %Colaboradores &                   &              	&        	\\ \hline
@@ -184,7 +185,7 @@ Usuario final & Operadores de L23  & \empclientename  	& Operador  	\\ \hline
 %No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.Sería deseable listar a continuación de la tabla las principales características de cada interesado.
 %Por ejemplo:
 \begin{itemize}
-\item Cliente: se encuentra de vacaciones.
+\item Cliente: se encuentra de vacaciones regresa el 05/04/2021.
 \item Orientador: suele demorar en responder los correos electrónicos.
 %\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
 \end{itemize}
@@ -197,8 +198,8 @@ Usuario final & Operadores de L23  & \empclientename  	& Operador  	\\ \hline
 \label{sec:proposito}
 
 \begin{consigna}{black}
-El propósito de este proyecto es crear un control de calidad de el proceso de impresion en la fecha de vencimiento de los paquetes de botellas de cepita o powerade, creando las bases para poder optimizar otros controles en un futuro.
-Este control actualmente lo realiza un operador el cual tambien realiza otras actividades no percatandose a veces de las fallas de impresion.
+El propósito de este proyecto es crear un control de calidad del proceso de impresión de la fecha de vencimiento de los paquetes de botellas de Cepita o Powerade, creando las bases para poder optimizar otros controles similares en un futuro.
+
 \end{consigna}
 
 \section{2. Alcance del proyecto}
@@ -208,7 +209,7 @@ Este control actualmente lo realiza un operador el cual tambien realiza otras ac
 El proyecto consta de una PC o sistema embebido, una cámara, un semáforo y un sistema de
 iluminación. \newline
 Se realizará el procesamiento de la imagen del paquete, tomara la decisión de si la fecha de vencimiento es correcta o no. \newline
-Se mostrara el resultado en un semáforo y transmitira la señal por lógica de 24v. El proyecto no incluye la programación de la detención de la línea.
+Se mostrara el resultado en un semáforo y transmitirá la señal por lógica de 24V hacia el PLC encargado del control del transporte. El proyecto no incluye la programación de la detención de la línea.
 %¿Qué se incluye y que no se incluye en este proyecto?
 %
 %Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
@@ -229,7 +230,7 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{itemize}
 \item El equipo estará en estado no productivo al menos una vez por semana.
 \item Se dispondrá de al menos dos horas diarias para trabajar en el proyecto.
-\item Habra disposición de materiales y/o repuestos que no se estén utilizando en las líneas de producción como cámaras o luces LED.
+\item Se podrán utilizar de materiales y/o repuestos que no se estén utilizando en las líneas de producción como cámaras, luces LED, gabinetes, soportes etc.
 
 \end{itemize}
 
@@ -244,16 +245,16 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{enumerate}
 \item Grupo de requerimientos asociados con la toma de imágenes
 	\begin{enumerate}
-	\item Cámara web o similar con una interface que pueda ser procesada por una pc o embebido.
-	\item Sistema de iluminación LED.
+	\item Cámara web con una resolución de al menos 720p y una velocidad de captura de 60fps, preferentemente con el sensor Sony IMX219, con una interfaz de conexión serial MIPI.
+	\item Sistema de iluminación LED de alta intensidad con un consumo de 24W, alimentación de 24v, lentes con foco en 50 grados, color de luz entre los 5500k~7000k, 1300 lúmenes y protección IP67.
 %\item Gabinete metálico y protección de acrı́ico para el equipo.
-	\item Gabinete metalico y proteccion de acrilico para el equipo.
+	\item Gabinete metálico preferentemente de acero inoxidable con un grado de protección IP66 de al menos 30cm x 30cm x 24cm.
 	\end{enumerate}
-\item Grupo de requerimientos asociados con procesamiento de imagenes
+\item Grupo de requerimientos asociados con procesamiento de imágenes
 	\begin{enumerate}
-	\item Pc o embebido con placa de video y sistema operativo linux.
-	\item Fuente de 24v industrial
-	\item Placa de interface y adaptación de voltajes para la comunicación PC-PLC(Maquina).
+	\item PC con un procesador con tarjeta gráfica integrada como el AMD Ryzen 5 3400G o similar, placa madre ITX compatible con el procesador, 8gb de memoria RAM, Fuente Evga 500w Reales 80 Plus 500 W o similar.
+	\item Fuente monofásica Siemens 24v, 10A, modelo sitop.
+	\item Placa de interfaz y adaptación de tensión para la comunicación PC-PLC(Maquina).
 	\end{enumerate}
 \end{enumerate}
 %Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
