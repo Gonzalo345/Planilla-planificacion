@@ -1,28 +1,28 @@
 \documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Control de impresión de fecha de vencimiento} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
-\posgrado{Carrera de Especialización en Internet de las Cosas} 
-%\posgrado{Carrera de Especialización en Intelegencia Artificial}
+%\posgrado{Carrera de Especialización en Internet de las Cosas} 
+\posgrado{Carrera de Especialización en Intelegencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Nombre del Autor} 
+\autor{Ing. Jorge Gonzalo, Cordo Yarvi} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Ing. Andrés F. Brumovsky}
+\pertenenciaDirector{FIUBA} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Mauricio Lodi}
+\empresaCliente{Andina Coca-Cola}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
 \juradoUno{Nombre y Apellido (1)}
@@ -32,9 +32,9 @@
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{25 de agosto de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlanificacion{13 de octubre de 2020} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{22 de agosto de 2021}		%Fecha de defensa pública del trabajo final
+\fechaINICIO{5 de marzo de 2021}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlanificacion{22 de diciembre de 2021} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{22 de diciembre de 2021}		%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -62,12 +62,11 @@
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-1.0      & Creación del documento                                          & 27/06/2020 \\ \hline
-1.1      & Avances en alguna cosa                                          & dd/mm/aaaa \\ \hline
-1.2      & Otro ejemplo \newline
-		   Con texto partido \newline
-		   En varias líneas \newline
-		   A propósito                                                     & dd/mm/aaaa \\ \hline
+1.0      & Creación del documento                                          & 05/03/2021\\ \hline
+1.1      & Se modifican los primeros 6 items                                      & 25/03/2021 \\ \hline
+1.2      & Cambio del objetivo del proyecto luego de hablar con el gerente del area \newline
+		   Se modifican los primeros 11 items  \newline
+ & 04/04/2021 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -84,7 +83,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de temperatura de un calefón, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de la correcta impresión de la fecha de caducidad en paquetes de bebida powerade/jugos cepita de la marca Coca-Cola, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{black}{\$60000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -107,22 +106,29 @@ Se adjunta a esta acta la planificación inicial.
 \section{Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red}
-El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
-Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+%\begin{consigna}{Red}
+En la fábrica de Coca-Cola es muy importante el control de calidad, dados los avances en la velocidad de las líneas de producción (actualmente se embotellan un millón de botellas en una de las líneas de producción en 24hs) muchos controles se realizan utilizando procesamiento de imágenes tradicionales.	Estos controles funcionan muy bien pero son muy sensibles a pequeños cambios en las condiciones del entorno, como variaciones de luz, el color de la tapa de la botella, una pequeña suciedad en la lente, o que la botella tenga una pequeña variación en su altura, lo que genera falsos rechazos y tener que hacer cambios constantemente en los parámetros de calibración (en algunos casos se crea un formato por cada color de tapa, uno por cada sabor y por cada tamaño de botella). 
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+La propuesta busca crear una solucion mas efectiva utilizando algoridmos de inteligencia artificial para el control de calidad de botellas o paquetes, comenzado por realizar el control de la correcta impresion de la fecha de vencimiento en los paquetes de distintos formatos de bebidas como cepita o powerade.
+
+Como se observa en el diagrama en bloques del sistema, en la figura 1, se utilizará un sistema embebido optimizado para el uso de inteligencia artificial para procesar las imágenes tomadas por la cámara, creando en una primera etapa una base de datos para luego entrenar el sistema para determinar si la fecha de vencimiento cumple los estandares de calidad necesarios y alertando o deteniendo el proceso de produccion si fuese necesario.
+
+%Para esto se utilizara un sistema embebido y una cámara para el procesamiento de las imágenes de los paquetes determinar si la fecha de vencimiento cumple los estandares de calidad necesario y alertando o deteniendo el proceso de produccion si fuese necesario.
+
+%Como se observa en el diagrama en bloques del sistema, en la figura 1, se utilizará un sistema embebido optimizado para el uso de inteligencia artificial para procesar las imágenes tomadas por la cámara, creando en una primera etapa una base de datos para luego entrenar el sistema para detectar botellas sin etiqueta. 
+
+El dispositivo se comunicará con el PLC (Controlador lógico programable) encargado del control del avance de paquetes, enviando las siguientes señales de estado:
 
 \begin{itemize}
-\item ¿Cómo se vincula este proyecto con la misión de la organización?
-\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-\item ¿Cuales son las necesidades que debe satisfacer?
-\item ¿Por dónde pasa la innovación?
+\item Operativo, (sin deteccion de paquetes mal etiquetados).
+\item Alarma (detección de una botella sin etiqueta en los últimos 30 segundos).
+\item Fallo (detección de más de una botella sin etiqueta en los últimos 30 segundos).
 \end{itemize}
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+El sistema debe funcionar con diferentes condiciones de iluminación durante el día y con distintos formatos como por jugos cepita 500ml, 1,5l, powerade 500ml. 
+
+%La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en %bloques del sistema }y una frase como la siguiente: ``En la Figura 
+%\ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se %observa que...''. Luego recién más abajo de haber puesto esta frase se pone la %figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas %en el texto, porque sino el lector no entiende por qué de pronto aparece una %figura.
 
 \vspace{25px}
 
@@ -135,27 +141,22 @@ La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en
 
 \vspace{25px}
 
-El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
-\end{consigna}
+%El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para %poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
+%\end{consigna}
 
-
+\newpage
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} 
-Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
- 
-Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
-
-\begin{itemize}
-\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
-\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
-\end{itemize}
-
-Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
-
+\begin{consigna}{black} 
+%Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
+%Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
+%Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
+%\begin{itemize}
+%\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
+%\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
+%\end{itemize}
+%Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
 %\label{tab:interesados}
@@ -163,32 +164,27 @@ Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por e
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
+%Auspiciante   &                   &              	&        	\\ \hline
 Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+%Impulsor      &                   &              	&        	\\ \hline
+Responsable   & \authorname       & UTN Frc        	& Alumno 	\\ \hline
+%Colaboradores &                   &              	&        	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+%Equipo        & miembro1 \newline 
+%				miembro2          &              	&        	\\ \hline
+%Opositores    &                   &              &        	\\ \hline
+Usuario final & Operadores de L9  & \empclientename  	& Operador  	\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
-
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Sería deseable listar a continuación de la tabla las principales características de cada interesado.
- 
-Por ejemplo:
+%El Director suele ser uno de los Orientadores.No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
+%No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.Sería deseable listar a continuación de la tabla las principales características de cada interesado.
+%Por ejemplo:
 \begin{itemize}
-\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
+\item Cliente: Se encuentra de carpeta medica por ser persona de riesgo, ver la opción de cambiar
+por el supervisor Mauricio Lodi.
+\item Orientador: Suele demorar en responder los correos electrónicos.
+%\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
 \end{itemize}
 
 \end{consigna}
@@ -198,77 +194,80 @@ Por ejemplo:
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
+\begin{consigna}{black}
+El propósito de este proyecto es mejorar el control de calidad del producto evitando tener que
+re-procesar manualmente todas las botellas o en el peor de los casos que una botella llegue sin
+etiqueta al usuario final.
 \end{consigna}
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
-
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
-
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
-
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
-
+\begin{consigna}{black}
+El proyecto consta de una pc o sistema embebido, una cámara, un semáforo y un sistema de
+iluminación, los cuales van a hacer el procesamiento de la imagen, tomando la decisión si la
+botella esta correcta o no, mostrando el resultado en el semáforo y transmitiendo una señal
+logica de 24v. El proyecto no incluye la programación de la detención de la linea o la expulsión
+de la botella no correcta.
+%¿Qué se incluye y que no se incluye en este proyecto?
+%
+%Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+%
+%Explicitar todo lo quede comprendido dentro del alcance del proyecto.
+%
+%Explicitar además todo lo que no quede incluido (``El presente %proyecto no incluye...'')
+%
 \end{consigna}
 
 
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+\begin{consigna}{black}
+Para el desarrollo del presente proyecto se supone que:
+%``Para el desarrollo del presente proyecto se supone que: ...''
 
 \begin{itemize}
-\item Supuesto 1
-\item Supuesto 2...
+\item Tendré disponibilidad del equipo en estado no productivo al menos una ves por semana.
+\item Tendré disponibilidad de al menos dos horas diarias para trabajar en el proyecto.
+\item Podre utilizar algunos materiales o repuestos que no se estén utilizando en la fabrica como cámaras o luces LED.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
+%Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
 \end{consigna}
 
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
-
+%\begin{consigna}{black}
+%Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
 \begin{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Grupo de requerimientos asociados con la toma de imágenes
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2
-	\item Requerimiento 3 (prioridad menor)
+	\item Cámara web o similar con una interface que pueda ser procesada por una pc o embebido.
+	\item Sistema de iluminación LED.
+%\item Gabinete metálico y protección de acrı́ico para el equipo.
+	\item Gabinete metalico y proteccion de acrilico para el equipo.
 	\end{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Grupo de requerimientos asociados con procesamiento de imagenes
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2 (prioridad menor)
+	\item Pc o embebido con placa de video y sistema operativo linux.
+	\item Fuente de 24v industrial
+	\item Placa de interface y adaptación de voltajes para la comunicación PC-PLC(Maquina).
 	\end{enumerate}
 \end{enumerate}
+%Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
+%De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
+%Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
+%No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
+%Y al escribirlos seguir las siguientes reglas:
+%\begin{itemize}
+%\item Ser breve y conciso (nadie lee cosas largas). 
+%\item Ser específico: no dejar lugar a confusiones.
+%\item Expresar los requerimientos en términos que sean cuantificables y medibles.
+%\end{itemize}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-\item Ser breve y conciso (nadie lee cosas largas). 
-\item Ser específico: no dejar lugar a confusiones.
-\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
+%\end{consigna}
 
 \section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
@@ -381,7 +380,7 @@ En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realiza
 \begin{figure}[htbp]
 \begin{center}
 \begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
+  \gantttitle{2021}{03} \\
   \gantttitlelist{1,...,12}{1} \\
   \ganttgroup{Group 1}{1}{7} \\
   \ganttbar{Task 1}{1}{2} \\
