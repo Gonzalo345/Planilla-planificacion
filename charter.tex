@@ -63,10 +63,13 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                          & 05/03/2021\\ \hline
-1.1      & Se modifican los primeros 6 items                                      & 25/03/2021 \\ \hline
-1.2      & Cambio del objetivo del proyecto luego de hablar con el gerente del area \newline
-		   Se modifican los primeros 11 items  \newline
- & 04/04/2021 \\ \hline
+1.1      & Modificación de los primeros 6 items                                      
+& 25/03/2021 \\ \hline
+1.2      & Luego de hablar con el gerente del area se modifica la inspección\newline
+a realizar.
+& 26/03/2021 \\ \hline
+1.3		 & Modificación los primeros 11 items  
+& 04/04/2021 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -111,21 +114,21 @@ En la fábrica de Coca-Cola es muy importante el control de calidad, dados los a
 
 La propuesta busca crear una solucion mas efectiva utilizando algoridmos de inteligencia artificial para el control de calidad de botellas o paquetes, comenzado por realizar el control de la correcta impresion de la fecha de vencimiento en los paquetes de distintos formatos de bebidas como cepita o powerade.
 
-Como se observa en el diagrama en bloques del sistema, en la figura 1, se utilizará un sistema embebido optimizado para el uso de inteligencia artificial para procesar las imágenes tomadas por la cámara, creando en una primera etapa una base de datos para luego entrenar el sistema para determinar si la fecha de vencimiento cumple los estandares de calidad necesarios y alertando o deteniendo el proceso de produccion si fuese necesario.
+Como se observa en el diagrama en bloques del sistema, en la figura 1, se utilizará un sistema embebido optimizado para el uso de inteligencia artificial para procesar las imágenes tomadas por la cámara, creando en una primera etapa una base de datos para luego entrenar el sistema para determinar si la fecha de vencimiento cumple los estandares de calidad necesarios, enviado una señal de alerta o detención del proceso de producción si fuese necesario.
 
 %Para esto se utilizara un sistema embebido y una cámara para el procesamiento de las imágenes de los paquetes determinar si la fecha de vencimiento cumple los estandares de calidad necesario y alertando o deteniendo el proceso de produccion si fuese necesario.
 
 %Como se observa en el diagrama en bloques del sistema, en la figura 1, se utilizará un sistema embebido optimizado para el uso de inteligencia artificial para procesar las imágenes tomadas por la cámara, creando en una primera etapa una base de datos para luego entrenar el sistema para detectar botellas sin etiqueta. 
 
-El dispositivo se comunicará con el PLC (Controlador lógico programable) encargado del control del avance de paquetes, enviando las siguientes señales de estado:
+El dispositivo se comunicará con el PLC (Controlador lógico programable) encargado del control del avance de paquetes, mediante las siguientes señales de estado:
 
 \begin{itemize}
-\item Operativo, (sin deteccion de paquetes mal etiquetados).
+\item Operativo, (sin detección de paquetes mal etiquetados).
 \item Alarma (detección de una botella sin etiqueta en los últimos 30 segundos).
 \item Fallo (detección de más de una botella sin etiqueta en los últimos 30 segundos).
 \end{itemize}
 
-El sistema debe funcionar con diferentes condiciones de iluminación durante el día y con distintos formatos como por jugos cepita 500ml, 1,5l, powerade 500ml. 
+El sistema debe funcionar con diferentes condiciones de iluminación durante el día y la noche y con deferentes formatos como por ejemplo jugos cepita 500ml, 1,5l, powerade 500ml y formatos similares. 
 
 %La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en %bloques del sistema }y una frase como la siguiente: ``En la Figura 
 %\ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se %observa que...''. Luego recién más abajo de haber puesto esta frase se pone la %figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas %en el texto, porque sino el lector no entiende por qué de pronto aparece una %figura.
@@ -173,7 +176,7 @@ Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hli
 %Equipo        & miembro1 \newline 
 %				miembro2          &              	&        	\\ \hline
 %Opositores    &                   &              &        	\\ \hline
-Usuario final & Operadores de L9  & \empclientename  	& Operador  	\\ \hline
+Usuario final & Operadores de L23  & \empclientename  	& Operador  	\\ \hline
 \end{tabularx}
 \end{table}
 
@@ -181,9 +184,8 @@ Usuario final & Operadores de L9  & \empclientename  	& Operador  	\\ \hline
 %No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.Sería deseable listar a continuación de la tabla las principales características de cada interesado.
 %Por ejemplo:
 \begin{itemize}
-\item Cliente: Se encuentra de carpeta medica por ser persona de riesgo, ver la opción de cambiar
-por el supervisor Mauricio Lodi.
-\item Orientador: Suele demorar en responder los correos electrónicos.
+\item Cliente: se encuentra de vacaciones.
+\item Orientador: suele demorar en responder los correos electrónicos.
 %\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
 \end{itemize}
 
@@ -195,20 +197,18 @@ por el supervisor Mauricio Lodi.
 \label{sec:proposito}
 
 \begin{consigna}{black}
-El propósito de este proyecto es mejorar el control de calidad del producto evitando tener que
-re-procesar manualmente todas las botellas o en el peor de los casos que una botella llegue sin
-etiqueta al usuario final.
+El propósito de este proyecto es crear un control de calidad de el proceso de impresion en la fecha de vencimiento de los paquetes de botellas de cepita o powerade, creando las bases para poder optimizar otros controles en un futuro.
+Este control actualmente lo realiza un operador el cual tambien realiza otras actividades no percatandose a veces de las fallas de impresion.
 \end{consigna}
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
 \begin{consigna}{black}
-El proyecto consta de una pc o sistema embebido, una cámara, un semáforo y un sistema de
-iluminación, los cuales van a hacer el procesamiento de la imagen, tomando la decisión si la
-botella esta correcta o no, mostrando el resultado en el semáforo y transmitiendo una señal
-logica de 24v. El proyecto no incluye la programación de la detención de la linea o la expulsión
-de la botella no correcta.
+El proyecto consta de una PC o sistema embebido, una cámara, un semáforo y un sistema de
+iluminación. \newline
+Se realizará el procesamiento de la imagen del paquete, tomara la decisión de si la fecha de vencimiento es correcta o no. \newline
+Se mostrara el resultado en un semáforo y transmitira la señal por lógica de 24v. El proyecto no incluye la programación de la detención de la línea.
 %¿Qué se incluye y que no se incluye en este proyecto?
 %
 %Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
@@ -225,12 +225,12 @@ de la botella no correcta.
 
 \begin{consigna}{black}
 Para el desarrollo del presente proyecto se supone que:
-%``Para el desarrollo del presente proyecto se supone que: ...''
 
 \begin{itemize}
-\item Tendré disponibilidad del equipo en estado no productivo al menos una ves por semana.
-\item Tendré disponibilidad de al menos dos horas diarias para trabajar en el proyecto.
-\item Podre utilizar algunos materiales o repuestos que no se estén utilizando en la fabrica como cámaras o luces LED.
+\item El equipo estará en estado no productivo al menos una vez por semana.
+\item Se dispondrá de al menos dos horas diarias para trabajar en el proyecto.
+\item Habra disposición de materiales y/o repuestos que no se estén utilizando en las líneas de producción como cámaras o luces LED.
+
 \end{itemize}
 
 %Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
