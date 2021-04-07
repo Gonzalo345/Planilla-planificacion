@@ -303,60 +303,63 @@ Como supervisor de mantenimiento quiero que el equipo funcione sin fallas.
 %Se recomienda mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
-\item Desarrollo del proyecto
+\item Desarrollo del proyecto 
 	\begin{enumerate}
 	\item Búsqueda de proyecto (12 hs)
-	\item Análisis de de viabilidad (8 hs)
-	\item Redacción de la propuesta (8 hs)
-	\item Planteo de la propuesta a la empresa (2 hs)
+	\item Análisis de de viabilidad (10 hs)
+	\item Redacción de la propuesta (16 hs)
+	\item Planteo de la propuesta a la empresa (6 hs)
 	\item Análisis de materiales necesarios y disponibles (12 hs)
-	\item Redacción de la planilla de planificación (8 hs)
+	\item Redacción de la planilla de planificación (20 hs)
 	\item Presentación de la propuesta(hito)
 	\end{enumerate}
-\item Preparativos
+\item Preparativos y desarrollo de prototipo
 \begin{enumerate}
-	\item Búsqueda o compra de materiales necesarios (4 hs)
+	\item Búsqueda o compra de materiales necesarios (10 hs)
 	\item Montaje de gabinete y sistema de iluminación (12 hs)
-	\item Montaje de componentes internos PC fuentes y conexiones internas (8 hs)
-	\item Conexión de alimentación externa (4 hs)
-	\item Puesta a punto del primer prototipo (8 hs)
+	\item Montaje de componentes internos PC fuentes y conexiones internas (10 hs)
+	\item Conexión de alimentación externa (6 hs)
+	\item Puesta a punto del primer prototipo (10 hs)
 	\item Captura de las primeras imágenes(hito)
 	\item Captura de imágenes de muestra de distintos formatos de cepita(20 hs) 
 	\item Captura de imágenes de muestra de distintos formatos de powerade(20 hs)
-	\item Conexión de semáforo (4hs)
-	\item Diseño de placa de adaptacion de tensiones (12hs)
-	\item Corrección entre prototipo y PLC (8 hs)
+	\item Conexión de semáforo (6hs)
+	\item Diseño de placa de adaptación de tensiones (20hs)
+	\item Corrección entre prototipo y PLC (10 hs)
 	\end{enumerate}
 \item Capacitación sobre conocimientos necesarios
 	\begin{enumerate}
-	\item Instalación de sofware como linux, Texmaker y otros (4 hs)
-	\item Capacitación en el uso control de versiones con Git (4 hs)
-	\item Análisis de librerías a utilizar (8 hs)
-	\item Compresión y evaluación de distintas técnicas de procesamiento de imágenes (20 hs)
+	\item Instalación de sofware como linux, Texmaker y otros (6 hs)
+	\item Capacitación en el uso control de versiones con Git (6 hs)
+	\item Análisis de librerías a utilizar (20 hs)
+	\item Compresión y evaluación de técnicas de centrado de imagenes con IA (20 hs) 
+	\item Compresión y evaluación de técnicas de procesamiento de imágenes (20 hs)
+	\item Análisis de algoritmos y técnicas de clasificacion con IA (20 hs)
 	\item Elegir algoritmos(8 hs)
 	\end{enumerate}
-\item Pruebas
+\item Pruebas y análisis de datos
 	\begin{enumerate}
 	\item Preparar set de datos (8 hs)
 	\item Pre-procesamiento de imágenes tomadas (12 hs)
 	\item Multiplicación del set de datos cambiando condiciones de iluminación y tonalidad en las imágenes (12 hs)
+	\item Evaluación y pruebas con distintos algoritmos de clasificación de IA (20 hs)
 	\item Algoritmo de clasificación funcional (hito)
 	\end{enumerate}
 \item Implementación
 	\begin{enumerate}
-	\item Testeo con linea en producción y evaluación de resultados del sistema (20 hs)
+	\item Pruebas con linea en producción y evaluación de resultados del sistema (20 hs)
 	\item Corrección de errores (8 hs)
-	\item Generación de informe preliminar(20 hs)
+	\item Generación de informe preliminar(16 hs)
 	\item Capacitación de operadores (4 hs)
-	\item Desarrollo de manual de usuario (8 hs)
+	\item Desarrollo del manual de usuario (8 hs)
 	\end{enumerate}
 \item Escritura de la memoria técnica
 	\begin{enumerate}
-	\item Realización capítulos 1 al 3 la memoria técnica (20 hs) 
-	\item Corrección de la memoria técnica (8 hs)
-	\item Realización capítulos 4 al 5 la memoria técnica (20 hs)
-	\item Corrección de la memoria técnica (8 hs)
-	\item Preparación de la defensa publica (8 hs)
+	\item Realización capítulos 1 al 3 la memoria técnica (30 hs) 
+	\item Corrección de la memoria técnica 12 hs)
+	\item Realización capítulos 4 al 5 la memoria técnica (30 hs)
+	\item Corrección de la memoria técnica (12 hs)
+	\item Preparación de la defensa publica (18 hs)
 	\item Defensa publica (hito)
 	
 	\end{enumerate}
@@ -383,7 +386,7 @@ Armar el AoN a partir del WBS definido en la etapa anterior.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=.8\textwidth]{./Figuras/diagAoN.png}
 \caption{Diagrama en \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
@@ -393,9 +396,18 @@ De ser necesario indicar los caminos semicríticos y analizar sus tiempos median
 Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
 
 
-
+\newpage
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
+
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1\textwidth]{./Figuras/Gantt5.pdf} %angle=90,origin=c,
+\caption{Diagrama en \textit{Activity on Node}}
+\label{fig:AoN}
+\end{figure}
+
 
 \begin{consigna}{red}
 Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
