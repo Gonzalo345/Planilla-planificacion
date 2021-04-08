@@ -87,7 +87,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de la correcta impresión de la fecha de caducidad en paquetes de bebida powerade/jugos cepita de la marca Coca-Cola, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{black}{\$200000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de la correcta impresión de la fecha de caducidad en paquetes de bebida powerade/jugos cepita de la marca Coca-Cola, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{black}{\$300000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -113,11 +113,11 @@ Se adjunta a esta acta la planificación inicial.
 %\begin{consigna}{Red}
 En la fábrica de Coca-Cola es muy importante el control de calidad, dados los avances en la velocidad de las líneas de producción (actualmente se embotellan un millón de botellas en una de las líneas de producción en 24hs) muchos controles se realizan utilizando procesamiento de imágenes tradicionales.	Estos controles funcionan muy bien pero son muy sensibles a pequeños cambios en las condiciones del entorno, como variaciones de luz, el color de la tapa de la botella, una pequeña suciedad en la lente, o que la botella tenga una pequeña variación en su altura, lo que genera falsos rechazos y tener que hacer cambios constantemente en los parámetros de calibración (en algunos casos se crea un formato por cada color de tapa, uno por cada sabor y por cada tamaño de botella). 
 
-La propuesta busca crear una solución mas efectiva utilizando algoritmos de inteligencia artificial para el control de calidad de botellas o paquetes, comenzado por realizar el control de la correcta impresión de la fecha de vencimiento en los paquetes de distintos formatos de bebidas como Cepita o Powerade.
+La propuesta busca crear una solución efectiva utilizando algoritmos de inteligencia artificial para el control de calidad de botellas o paquetes, comenzado por realizar el control de la correcta impresión de la fecha de vencimiento en los paquetes de distintos formatos de bebidas como Cepita o Powerade.
 
 Como se observa en el diagrama en bloques del sistema de la figura \ref{fig:diagBloques}, se utilizará un sistema embebido optimizado para el uso de inteligencia artificial para procesar las imágenes tomadas por la cámara, creando en una primera etapa una base de datos para luego entrenar el sistema para determinar si la fecha de vencimiento cumple los estándares de calidad necesarios, enviado una señal de alerta o detención del proceso de producción si fuese necesario. Lo que se busca es que la fecha de vencimiento sea legible y que la misma sea correcta siendo 150 días o 180 días, según el producto.
 
-%Para esto se utilizara un sistema embebido y una cámara para el procesamiento de las imágenes de los paquetes determinar si la fecha de vencimiento cumple los estandares de calidad necesario y alertando o deteniendo el proceso de produccion si fuese necesario.
+%Para esto se utilizara un sistema embebido y una cámara para el procesamiento de las imágenes de los paquetes determinar si la fecha de vencimiento cumple los estándares de calidad necesario y alertando o deteniendo el proceso de producción si fuese necesario.
 
 %Como se observa en el diagrama en bloques del sistema, en la figura 1, se utilizará un sistema embebido optimizado para el uso de inteligencia artificial para procesar las imágenes tomadas por la cámara, creando en una primera etapa una base de datos para luego entrenar el sistema para detectar botellas sin etiqueta. 
 
@@ -206,8 +206,7 @@ El propósito de este proyecto es crear un control de calidad del proceso de imp
 \label{sec:alcance}
 
 \begin{consigna}{black}
-El proyecto consta de una PC o sistema embebido, una cámara, un semáforo y un sistema de
-iluminación. \newline
+El proyecto consta de una PC o sistema embebido, una cámara, un semáforo y un sistema de iluminación. \newline
 Se realizará el procesamiento de la imagen del paquete, tomara la decisión de si la fecha de vencimiento es correcta o no. \newline
 Se mostrara el resultado en un semáforo y transmitirá la señal por lógica de 24V hacia el PLC encargado del control del transporte. El proyecto no incluye la programación de la detención de la línea.
 %¿Qué se incluye y que no se incluye en este proyecto?
@@ -247,7 +246,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\begin{enumerate}
 	\item Cámara web con una resolución de al menos 720p y una velocidad de captura de 60fps, preferentemente con el sensor Sony IMX219, con una interfaz de conexión serial MIPI.
 	\item Sistema de iluminación LED de alta intensidad con un consumo de 24W, alimentación de 24v, lentes con foco en 50 grados, color de luz entre los 5500k~7000k, 1300 lúmenes y protección IP67.
-%\item Gabinete metálico y protección de acrı́ico para el equipo.
+%\item Gabinete metálico y protección de acrílico para el equipo.
 	\item Gabinete metálico preferentemente de acero inoxidable con un grado de protección IP66 de al menos 50cm de ancho, 70cm alto x 30cm de profundidad.
 	\end{enumerate}
 \item Grupo de requerimientos asociados con procesamiento de imágenes
@@ -276,7 +275,7 @@ Para el desarrollo del presente proyecto se supone que:
 
 
 Como operador quiero no tener que volver a controlar si la fecha de vencimiento es legible o es correcta, así poder dedicarme a otras actividades.\newline
-Como supervisor no quiero que la producción no se detenga. \newline
+Como supervisor no quiero que la producción se detenga. \newline
 Como supervisor de calidad quiero que la fecha de caducidad sea legible y que sea la correcta.\newline
 Como supervisor de mantenimiento quiero que el equipo funcione sin fallas. 
 
@@ -290,7 +289,7 @@ Como supervisor de mantenimiento quiero que el equipo funcione sin fallas.
 \begin{itemize}
 \item Manual de uso
 \item Diagrama esquemático de la conexión eléctrica. 
-\item Respaldo de la memoria de la pc como imagen .iso
+\item Respaldo de la memoria de la PC como imagen de formato .iso
 \item Diagrama de componentes
 \item Informe final
 
@@ -305,73 +304,73 @@ Como supervisor de mantenimiento quiero que el equipo funcione sin fallas.
 \begin{enumerate}
 \item Desarrollo del proyecto 
 	\begin{enumerate}
-	\item Búsqueda de proyecto (12 hs)
-	\item Análisis de de viabilidad (10 hs)
-	\item Análisis de materiales necesarios y dispnibles (12 hs)
-	\item Redacción de la planilla de planificación 1-6 (16 hs)
-	\item Corrección de la planilla de planificacción (10 hs)
-	\item Planteo de la propuesta a la empresa (4 hs)
-	\item Cámbio de propuesta redaccion de planilla 1-8 (20 hs)
-	\item Redacción de la planilla de planificaición 8-17 (20 hs)
-	\item Corrección de la planilla de planificación (10 hs)
-	\item Preparar propuesta (6 hs)
+	\item Búsqueda de proyecto (12 h)
+	\item Análisis de viabilidad (10 h)
+	\item Análisis de materiales necesarios y disponibles (12 h)
+	\item Redacción de la planilla de planificación 1-6 (16 h)
+	\item Corrección de la planilla de planificacción (10 h)
+	\item Planteo de la propuesta a la empresa (4 h)
+	\item Cambio de propuesta redacción de planilla 1-8 (20 h)
+	\item Redacción de la planilla de planificación 8-17 (20 h)
+	\item Corrección de la planilla de planificación (10 h)
+	\item Preparar propuesta (6 h)
 	\item Presentación de la propuesta(hito)
 	\end{enumerate}
 \item Preparativos y desarrollo de prototipo
 \begin{enumerate}
-	\item Búsqueda o compra de materiales necesarios (10 hs)
-	\item Montaje de gabinete y sistema de iluminación (12 hs)
-	\item Montaje de componentes internos PC fuentes y conexiones internas (10 hs)
-	\item Conexión de alimentación externa (6 hs)
-	\item Puesta a punto del primer prototipo (10 hs)
+	\item Búsqueda o compra de materiales necesarios (10 h)
+	\item Montaje de gabinete y sistema de iluminación (12 h)
+	\item Montaje de componentes internos PC fuentes y conexiones internas (10 h)
+	\item Conexión de alimentación externa (6 h)
+	\item Puesta a punto del primer prototipo (10 h)
 	\item Captura de las primeras imágenes(hito)
-	\item Captura de imágenes de muestra de distintos formatos de cepita(20 hs) 
-	\item Captura de imágenes de muestra de distintos formatos de powerade(20 hs)
-	\item Conexión de semáforo (6hs)
-	\item Diseño de placa de adaptación de tensiones (20 hs)
-	\item Corrección entre prototipo y PLC (10 hs)
+	\item Captura de imágenes de muestra de distintos formatos de cepita(20 h) 
+	\item Captura de imágenes de muestra de distintos formatos de powerade(20 h)
+	\item Conexión de semáforo (6h)
+	\item Diseño de placa de adaptación de tensiones (20 h)
+	\item Corrección entre prototipo y PLC (10 h)
 	\end{enumerate}
 \item Capacitación sobre conocimientos necesarios
 	\begin{enumerate}
-	\item Instalación de sofware como linux, Texmaker y otros (6 hs)
-	\item Capacitación en el uso control de versiones con Git (6 hs)
+	\item Instalación de software como linux, Texmaker y otros (6 h)
+	\item Capacitación en el uso control de versiones con Git (6 h)
 	\item Análisis de librerías a utilizar (20 hs)
-	\item Evaluacion de tecnicas de centrado de imagenes con IA (20 hs) 
-	\item Evaluación de técnicas de procesamiento de imágenes (20 hs)
-	\item Análisis de algoridmos y técnicas de clasificación con IA (20 hs)
+	\item Evaluación de técnicas de centrado de imágenes con IA (20 h) 
+	\item Evaluación de técnicas de procesamiento de imágenes (20 h)
+	\item Análisis de algoritmos y técnicas de clasificación con IA (20 h)
 
-	\item Análisis de algoritmos y técnicas de clasificacion con IA (20 hs)
-	\item Elegir algoritmos(12 hs)
+	\item Análisis de algoritmos y técnicas de clasificación con IA (20 h)
+	\item Elegir algoritmos(12 h)
 	\end{enumerate}
 \item Pruebas y análisis de datos
 	\begin{enumerate}
-	\item Preparar set de datos (30 hs)
-	\item Pre-procesamiento de imágenes tomadas (15 hs)
-	\item Multiplicación del set de datos cambiando condiciones de iluminación y tonalidad en las imágenes (20 hs)
-	\item Algoritmo de clasificación funcional (20 hs)
+	\item Preparar set de datos (30 h)
+	\item Preprocesamiento de imágenes tomadas (15 h)
+	\item Multiplicación del set de datos cambiando condiciones de iluminación y tonalidad en las imágenes (20 h)
+	\item Funcionamiento de algoritmo de clasificación (20 h)
 	\end{enumerate}
 \item Implementación
 	\begin{enumerate}
-	\item Pruebas con linea en producción y evaluación de resultados del sistema (25 hs)
-	\item Corrección de errores (20 hs)
-	\item Generación de informe preliminar(16 hs)
-	\item Capacitación de operadores (16 hs)
-	\item Desarrollo del manual de usuario (20 hs)
+	\item Pruebas con línea en producción y evaluación de resultados del sistema (25 h)
+	\item Corrección de errores (20 h)
+	\item Generación de informe preliminar(16 h)
+	\item Capacitación de operadores (16 h)
+	\item Desarrollo del manual de usuario (20 h)
 	\end{enumerate}
 \item Escritura de la memoria técnica
 	\begin{enumerate}
-	\item Realización capítulos 1 al 3 la memoria técnica (40 hs) 
-	\item Corrección de la memoria técnica 18 hs)
-	\item Realización capítulos 4 al 5 la memoria técnica (40 hs)
-	\item Corrección de la memoria técnica (18 hs)
-	\item Preparación de la defensa publica (10 hs)
-	\item Defensa publica (4 hs)
+	\item Realización capítulos 1 al 3 la memoria técnica (40 h) 
+	\item Corrección de la memoria técnica (18 h)
+	\item Realización capítulos 4 al 5 la memoria técnica (40 h)
+	\item Corrección de la memoria técnica (18 h)
+	\item Preparación de la defensa publica (10 h)
+	\item Defensa publica (4 h)
 	
 	\end{enumerate}
 
 \end{enumerate}
 
-Cantidad total de horas: (660 hs)
+Cantidad total de horas: (660 h)
 
 %Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
 
@@ -386,7 +385,7 @@ Cantidad total de horas: (660 hs)
 
 %\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
 
-En la figura \ref{fig:AoN} podemos observar el Diagrama de \textit{Activity on Node} en el cual la unidad de tiempo t esta expresada en semanas y las flechas mas gruesas indican el camino critico.
+En la figura \ref{fig:AoN} podemos observar el diagrama de \textit{Activity on Node} en el cual la unidad de tiempo t esta expresada en semanas y las flechas más gruesas indican el camino critico.
 \newline
 
 \begin{figure}[htpb]
@@ -405,7 +404,7 @@ En la figura \ref{fig:AoN} podemos observar el Diagrama de \textit{Activity on N
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{figure}[h]
+\begin{figure}[htbpt]
 \centering 
 \includegraphics[angle=270,width=1\textwidth]{./Figuras/Gantt5.pdf} %angle=90,origin=c,
 \caption{Diagrama de \textit{gantt }}
