@@ -64,12 +64,12 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                          & 05/03/2021\\ \hline
-1.1      & Modificación de los primeros 6 items                                      
+1.1      & Modificación de los primeros 6 ítems                                      
 & 25/03/2021 \\ \hline
 1.2      & Luego de hablar con el gerente del area se modifica la inspección\newline
 a realizar.
 & 26/03/2021 \\ \hline
-1.3		 & Modificación los primeros 8 items  
+1.3		 & Modificación los primeros 8 ítems  
 & 08/04/2021 \\ \hline
 \end{tabularx}
 \end{table}
@@ -349,7 +349,7 @@ Como supervisor de mantenimiento quiero que el equipo funcione sin fallas.
 	\item Multiplicación del set de datos cambiando condiciones de iluminación y tonalidad en las imágenes (20 h)
 	\item Funcionamiento de algoritmo de clasificación (20 h)
 	\end{enumerate}
-\item Implementación
+\item Implementación y correcciones finales
 	\begin{enumerate}
 	\item Pruebas con línea en producción y evaluación de resultados del sistema (25 h)
 	\item Corrección de errores (20 h)
@@ -390,7 +390,7 @@ En la figura \ref{fig:AoN} podemos observar el diagrama de \textit{Activity on N
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/diagAoN.png}
+\includegraphics[width=\textwidth]{./Figuras/diagAoN.png} %width=.8\textwidth
 \caption{Diagrama en \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
@@ -401,13 +401,13 @@ En la figura \ref{fig:AoN} podemos observar el diagrama de \textit{Activity on N
 %\newline
 %\newline
 %\newline
-\newpage
+%\newpage
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
 \begin{figure}[ht]
 \centering 
-\includegraphics[origin=c,width=1\textwidth]{./Figuras/Gantt7.pdf} %angle=270,origin=c,
+\includegraphics[origin=c,width=\textwidth]{./Figuras/Gantt7.pdf} %angle=270,origin=c,
 \caption{Diagrama de \textit{gantt }}
 \label{fig:gantt}
 \end{figure}
@@ -459,41 +459,21 @@ En la figura \ref{fig:AoN} podemos observar el diagrama de \textit{Activity on N
 \label{sec:recursos}
 
 
+
 \begin{table}[htpb]
 \label{tab:recursos}
 \centering
 \begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|c|@{}}
 \hline
 \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} &Computadora &Prototipo &Placa de video &Herramientas  \\ \hline
+1 &Desarrollo del proyecto   						&80h		&		&  		&  	\\ \hline
+2 &Preparativos y desarrollo de prototipo			&40h		&20h		&  		&20h	\\ \hline
+3 &Capacitación sobre conocimientos necesarios  	&80h 	&10h 	&20h 	&  	\\ \hline
+4 &Pruebas y análisis de datos  					&40h 	&20h 	&40h 	&10h	\\ \hline
+5 &Implementación y correcciones finales			&40h		&		&  		&10h\\ \hline
+6 &Escritura de la memoria técnica  				&80h		&  		&  		&  	\\ \hline
+
 
 \end{tabularx}%
 \end{table}
@@ -502,16 +482,6 @@ En la figura \ref{fig:AoN} podemos observar el diagrama de \textit{Activity on N
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -524,55 +494,107 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+
+  
+\multicolumn{1}{|l|}{Prototipo}				&1	&150000\$	&150000\$	\\ \hline
+\multicolumn{1}{|l|}{Gabinete}				&1	&60000\$		&60000\$		\\ \hline
+\multicolumn{1}{|l|}{Borneras cables}			&1	&20000\$		&20000\$		\\ \hline
+\multicolumn{1}{|l|}{Camara}					&1	&45000\$		&45000\$		\\ \hline
+\multicolumn{1}{|l|}{Servicios en la nuve}	&1	&25000\$		&25000\$		\\ \hline
+\multicolumn{1}{|l|}{660 Hs Hombre}    			&660	&660\$		&396000\$	\\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+\multicolumn{1}{c|}{696000\$} \\ \hline
+
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
-Descripción &
+Descripción &  
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
+\multicolumn{1}{|l|}{30 de los Costos Directos } &1   &1   &243600\$
    \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{243600\$} \\ \hline
 \rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
+\multicolumn{3}{|c|}{TOTAL} & 939600\$
    \\ \hline
 \end{tabularx}%
 \end{table}
-
+\newpage
 
 \section{11. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
 \begin{consigna}{red}
+\begin{enumerate}
+\item Desarrollo del proyecto 
+	\begin{enumerate}
+	\item Búsqueda de proyecto (12 h)
+	\item Análisis de viabilidad (10 h)
+	\item Análisis de materiales necesarios y disponibles (12 h)
+	\item Redacción de la planilla de planificación 1-6 (16 h)
+	\item Corrección de la planilla de  (10 h)
+	\item Planteo de la propuesta a la empresa (4 h)
+	\item Cambio de propuesta redacción de planilla 1-8 (20 h)
+	\item Redacción de la planilla de planificación 8-17 (20 h)
+	\item Corrección de la planilla de planificación (10 h)
+	\item Preparar propuesta (6 h)
+	\item Presentación de la propuesta(hito)
+	\end{enumerate}
+\item Preparativos y desarrollo de prototipo
+\begin{enumerate}
+	\item Búsqueda o compra de materiales necesarios (10 h)
+	\item Montaje de gabinete y sistema de iluminación (12 h)
+	\item Montaje de componentes internos PC fuentes y conexiones internas (10 h)
+	\item Conexión de alimentación externa (6 h)
+	\item Puesta a punto del primer prototipo (10 h)
+	\item Captura de las primeras imágenes(hito)
+	\item Captura de imágenes de muestra de distintos formatos de cepita(20 h) 
+	\item Captura de imágenes de muestra de distintos formatos de powerade(20 h)
+	\item Conexión de semáforo (6h)
+	\item Diseño de placa de adaptación de tensiones (20 h)
+	\item Corrección entre prototipo y PLC (10 h)
+	\end{enumerate}
+\item Capacitación sobre conocimientos necesarios
+	\begin{enumerate}
+	\item Instalación de software como linux, Texmaker y otros (6 h)
+	\item Capacitación en el uso control de versiones con Git (6 h)
+	\item Análisis de librerías a utilizar (20 hs)
+	\item Evaluación de técnicas de centrado de imágenes con IA (20 h) 
+	\item Evaluación de técnicas de procesamiento de imágenes (20 h)
+	\item Análisis de algoritmos y técnicas de clasificación con IA (20 h)
+
+	\item Análisis de algoritmos y técnicas de clasificación con IA (20 h)
+	\item Elegir algoritmos(12 h)
+	\end{enumerate}
+\item Pruebas y análisis de datos
+	\begin{enumerate}
+	\item Preparar set de datos (30 h)
+	\item Preprocesamiento de imágenes tomadas (15 h)
+	\item Multiplicación del set de datos cambiando condiciones de iluminación y tonalidad en las imágenes (20 h)
+	\item Funcionamiento de algoritmo de clasificación (20 h)
+	\end{enumerate}
+\item Implementación y correcciones finales
+	\begin{enumerate}
+	\item Pruebas con línea en producción y evaluación de resultados del sistema (25 h)
+	\item Corrección de errores (20 h)
+	\item Generación de informe preliminar(16 h)
+	\item Capacitación de operadores (16 h)
+	\item Desarrollo del manual de usuario (20 h)
+	\end{enumerate}
+\item Escritura de la memoria técnica
+	\begin{enumerate}
+	\item Realización capítulos 1 al 3 la memoria técnica (40 h) 
+	\item Corrección de la memoria técnica (18 h)
+	\item Realización capítulos 4 al 5 la memoria técnica (40 h)
+	\item Corrección de la memoria técnica (18 h)
+	\item Preparación de la defensa publica (10 h)
+	\item Defensa publica (4 h)
+	
+	\end{enumerate}
+
+\end{enumerate}
 Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 
 \begin{table}[htpb]
@@ -594,13 +616,16 @@ Establecer la matriz de asignación de responsabilidades y el manejo de la autor
 \rowcolor[HTML]{C0C0C0} 
 \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
   \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
-  \authorname &
+  Ing. Gonzalo, Cordo &%\authorname &
   \supname &
-  Nombre de alguien &
+  Operadores &
   \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+ 1&  Desarrollo del proyecto						&P	&A  &I 	&A  \\ \hline
+ 2&  Preparativos y desarrollo de prototipo		&P  &C  	&  	&S  \\ \hline
+ 3&  Capacitación sobre conocimientos necesarios	&P  &C  	&  	&  	\\ \hline
+ 1&  Pruebas y análisis de datos					&P  &C  	&I  	&C  \\ \hline
+ 2&  Implementación y correcciones finales		&P  &A  	&A  	&C  \\ \hline
+ 3&  Escritura de la memoria técnica				&P  &A  	&A  &A  \\ \hline
 \end{tabular}%
 }
 \end{table}
@@ -626,9 +651,9 @@ Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o respo
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
 a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
+Riesgo 1: No conseguir la pc a tiempo
+
 Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
 \begin{itemize}
 \item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
@@ -684,7 +709,6 @@ Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de
  
 Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
 
-\end{consigna}
 
 
 \section{13. Gestión de la calidad}
