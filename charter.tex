@@ -244,13 +244,16 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{enumerate}
 \item Grupo de requerimientos asociados con la toma de imágenes
 	\begin{enumerate}
+	\item Debe ser capaz de reconocer si la fecha de vencimiento es legible y distinguir entre un paquete mal codificado de uno correcto.
+	\item Debe detectar si la fecha de vencimiento es la correcta, por ejemplo si el producto tiene un vencimiento de 180 días debe sumarle los días a la fecha actual calcular la nueva fecha y corroborar si es la misma que se está imprimiendo. 
 	\item Cámara web con una resolución de al menos 720p y una velocidad de captura de 60fps, preferentemente con el sensor Sony IMX219, con una interfaz de conexión serial MIPI.
 	\item Sistema de iluminación LED de alta intensidad con un consumo de 24W, alimentación de 24v, lentes con foco en 50 grados, color de luz entre los 5500k~7000k, 1300 lúmenes y protección IP67.
 %\item Gabinete metálico y protección de acrílico para el equipo.
-	\item Gabinete metálico preferentemente de acero inoxidable con un grado de protección IP66 de al menos 50cm de ancho, 70cm alto x 30cm de profundidad.
+	\item Gabinete metálico preferentemente de acero inoxidable con un grado de protección IP65 de al menos 50cm de ancho, 70cm alto x 30 cm de profundidad.
 	\end{enumerate}
 \item Grupo de requerimientos asociados con procesamiento de imágenes
 	\begin{enumerate}
+	\item Debe ser capaz de procesar si el paquete es correcto o no sin detener la línea de producción.
 	\item PC con un procesador con tarjeta gráfica integrada como el AMD Ryzen 5 3400G o similar, placa madre ITX compatible con el procesador, 8gb de memoria RAM, Fuente Evga 500w Reales 80 Plus 500 W o similar.
 	\item Fuente monofásica Siemens 24v, 10A, modelo sitop.
 	\item Placa de interfaz y adaptación de tensión para la comunicación PC-PLC(Maquina).
@@ -588,7 +591,7 @@ a) Identificación de los riesgos y estimación de sus consecuencias:
 Riesgo 1: no lograr capturar imágenes nítidas y centradas
 \begin{itemize}
 \item Severidad (5): no conseguir una base de datos uniforme va a demorar el proceso procesado de las imágenes para su posterior utilización en el entrenamiento de las redes neuronales.
-\item Probabilidad de ocurrencia (3): los paquetes no siempre se desplazan a la misma velocidad y la iluminación cambia durante el día.
+\item Probabilidad de ocurrencia (3): se espera que con la correcta instalación de la iluminación y con la posibilidad de cambiar la cámara por una de mayor velocidad de obturación se va a lograr conseguir una buena calidad de imagen.  
 \end{itemize}   
 
 Riesgo 2: demoras en la adquisición de componentes electrónicos necesarios
@@ -600,7 +603,7 @@ Riesgo 2: demoras en la adquisición de componentes electrónicos necesarios
 Riesgo 3: falta de tiempo disponible para la realización del proyecto
 
 \begin{itemize}
-\item Severidad (4): puede demorar la fecha de entrega
+\item Severidad (4): puede demorar la fecha de entrega.
 \item Ocurrencia (6): al ser realizado por una sola persona que también realiza otras tareas
 \end{itemize}
 
@@ -625,57 +628,91 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Riesgo 								& S	& O	& RPN & S* & O* & RPN* \\ \hline
-Imágenes nítidas y centradas		& 5 & 3 & 15  &    &    &      \\ \hline
-Demora de componentes     			& 5 & 5 & 25  &    &    &      \\ \hline
-Falta de tiempo disponible    		& 4 & 6 & 24  &    &    &      \\ \hline
-Falta de poder de procesamiento		& 3 & 2 & 6   &    &    &      \\ \hline
-Protección contra el polvo y agua	& 8 & 2 & 16  &    &    &      \\ \hline
+Riesgo 								& S	& O	& RPN	& S* & O* & RPN* \\ \hline
+Imágenes nítidas y centradas			& 5 & 3 & 15  	&    &    & 15   \\ \hline
+Demora de componentes     			& 5 & 5 & 25  	& 3* & 5* & 15*  \\ \hline
+Falta de tiempo disponible    		& 4 & 6 & 24  	& 3* & 5* & 15*  \\ \hline
+Falta de poder de procesamiento		& 3 & 2 & 6   	&    &    & 6    \\ \hline
+Protección contra el polvo y agua		& 8 & 2 & 16		&	 &    & 16   \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
-
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 16.
+\newline
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
+
+
+Riesgo 2: se comenzara trabajando con harware ya disponible para poder avanzar mientras se aprueba la compra de los componentes necesarios.
+
+\begin{itemize}
+\item Severidad (3*): la demora en la compra de componentes ya no impacta directamente en los tiempos de entrega.
+\item Probabilidad de ocurrencia (5): se mantiene la probabilidad de ocurrencia.
+ \end{itemize}
  
-Riesgo 1: Con la correcta instalación de la iluminación y con la posibilidad de cambiar la cámara por una de mayor velocidad de obturación se va a lograr conseguir una buena calidad de imagen.  
+Riesgo 3: se destinara todo el tiempo disponible, palnificaran las tareas y solicitara ayuda en caso de ser necesario.
 
-plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-
+\begin{itemize}
+\item Severidad (3*): al obtimizar el tiempo de trabajo se reducen los tiempos de entrega.
+\item Probabilidad de ocurrencia (5*): disminuye la probabilidad de ocurrencia.
+\end{itemize}
 
 \section{13. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Debe ser capaz de procesar si el paquete es correcto o no sin detener la línea de producción.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 Para cada uno de los requerimientos del proyecto indique:
 \begin{itemize} 
-\item Req \#1: copiar acá el requerimiento.
+\item Req \#1: El dispositivo debe ser capaz de reconocer si la fecha de vencimiento es legible y distinguir entre un paquete mal codificado de uno correcto.
 
 Verificación y validación:
 
 \begin{itemize}
-\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+\item Verificación: se debe observar que el dispositivo identifique que la fecha de vencimiento es ilegible o está mal codificado 
+\item Validación: se colocaran paquetes bien y mal codificados corroborando que estos sean correctamente clasificados, se dejará operativo el sistema por más de 24hs corroborando que funcione correctamente.
+
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize} 
+\item Req \#2: Debe detectar si la fecha de caducidad es la correcta, por ejemplo si el producto tiene un vencimiento de 180 días debe sumarle los días a la fecha actual calcular la nueva fecha y corroborar si es la misma que se está imprimiendo. 
+
+Verificación y validación:
+
+\begin{itemize}
+\item Verificación: se debe observar que el dispositivo controle que la fecha de caducidad es correcta, distinguiendo entre una fecha errónea de una correcta.
+\item Validación: se forzará una fecha de caducidad errónea y comprobará que el paquete sea clasificado como mal codificado.
+
 \end{itemize}
 
 \end{itemize}
 
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.
+\begin{itemize} 
+\item Req \#3: Debe ser capaz de procesar si el paquete es correcto o no sin detener la línea de producción.
 
-\end{consigna}
+Verificación y validación:
+
+\begin{itemize}
+\item Verificación: Se deben controlar los paquetes a la misma velocidad a la que se producen.
+\item Validación: Se observa que el tiempo de procesamiento de cada paquete sea menor al tiempo de producción del mismo en todos los casos de funcionamiento.
+
+\end{itemize}
+
+\end{itemize}
+
+%Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.
+
+
 
 \section{14. Comunicación del proyecto}
 \label{sec:comunicaciones}
@@ -690,7 +727,7 @@ El plan de comunicación del proyecto es el siguiente:
 \multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO}           \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 ¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicac. & Responsable \\ \hline
-                &           &           &            &                      &             \\ \hline
+Avances del proyecto             &           &           &            &                      &             \\ \hline
                 &           &           &            &                      &             \\ \hline
                 &           &           &            &                      &             \\ \hline
                 &           &           &            &                      &             \\ \hline
@@ -700,6 +737,7 @@ El plan de comunicación del proyecto es el siguiente:
 
 \section{15. Gestión de compras}
 \label{sec:compras}
+
 
 \begin{consigna}{red}
 En caso de tener que comprar elementos o contratar servicios:
