@@ -253,7 +253,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\end{enumerate}
 \item Grupo de requerimientos asociados con procesamiento de imágenes
 	\begin{enumerate}
-	\item Debe ser capaz de procesar si el paquete es correcto o no sin detener la línea de producción.
+	\item Debe ser capaz de procesar si la fecha de vencimiento de cada paquete es correcta, sin detener la línea de producción.
 	\item PC con un procesador con tarjeta gráfica integrada como el AMD Ryzen 5 3400G o similar, placa madre ITX compatible con el procesador, 8gb de memoria RAM, Fuente Evga 500w Reales 80 Plus 500 W o similar.
 	\item Fuente monofásica Siemens 24v, 10A, modelo sitop.
 	\item Placa de interfaz y adaptación de tensión para la comunicación PC-PLC(Maquina).
@@ -596,15 +596,15 @@ Riesgo 1: no lograr capturar imágenes nítidas y centradas
 
 Riesgo 2: demoras en la adquisición de componentes electrónicos necesarios
 \begin{itemize}
-\item Severidad (5): no tener un prototipo listo en el tiempo planificado va a demorar el proyecto al no tener una base de datos de las imágenes necesarias para la realización del proyecto 
-\item Ocurrencia (5): los procesos de compras en la empresa suelen demorar al tener que ser aprobados por el departamento de compras
+\item Severidad (5): no tener un prototipo listo en el tiempo planificado va a demorar el proyecto al no tener una base de datos de las imágenes necesarias para la realización del proyecto. 
+\item Ocurrencia (5): los procesos de compras en la empresa suelen demorar al tener que ser aprobados por el departamento de compras.
 \end{itemize}
 
 Riesgo 3: falta de tiempo disponible para la realización del proyecto
 
 \begin{itemize}
 \item Severidad (4): puede demorar la fecha de entrega.
-\item Ocurrencia (6): al ser realizado por una sola persona que también realiza otras tareas
+\item Ocurrencia (6): al ser realizado por una sola persona que también realiza otras tareas.
 \end{itemize}
 
 Riesgo 4: error en el cálculo de poder de procesamiento necesario
@@ -616,8 +616,8 @@ Riesgo 4: error en el cálculo de poder de procesamiento necesario
 Riesgo 5: Protección contra el polvo y agua deficientes.
 
 \begin{itemize}
-\item Severidad (8): con el polvo o agua los componentes electrónicos pueden dañarse teniendo que volver a comprarlos 
-\item Ocurrencia (2): al ser un gabinete con un nivel de protección ip65 no debería permitir el paso de agua o polvo  
+\item Severidad (8): con el polvo o agua los componentes electrónicos pueden dañarse teniendo que volver a comprarlos. 
+\item Ocurrencia (2): al ser un gabinete con un nivel de protección ip65 no debería permitir el paso de agua o polvo.  
 \end{itemize}
 
 
@@ -628,12 +628,12 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Riesgo 								& S	& O	& RPN	& S* & O* & RPN* \\ \hline
-Imágenes nítidas y centradas			& 5 & 3 & 15  	&    &    & 15   \\ \hline
-Demora de componentes     			& 5 & 5 & 25  	& 3* & 5* & 15*  \\ \hline
-Falta de tiempo disponible    		& 4 & 6 & 24  	& 3* & 5* & 15*  \\ \hline
-Falta de poder de procesamiento		& 3 & 2 & 6   	&    &    & 6    \\ \hline
-Protección contra el polvo y agua		& 8 & 2 & 16		&	 &    & 16   \\ \hline
+Riesgo 									& S		& O		& RPN		& S* 	& O* 	& RPN* \\ \hline
+Imágenes nítidas y centradas			& 5 	& 3 	& 15  		&    	&    	& 15   \\ \hline
+Demora de componentes     				& 5 	& 5 	& 25  		& 3* 	& 5* 	& 15*  \\ \hline
+Falta de tiempo disponible    			& 4 	& 6 	& 24  		& 3* 	& 5* 	& 15*  \\ \hline
+Falta de poder de procesamiento			& 3 	& 2 	& 6   		&  	 	&    	& 6    \\ \hline
+Protección contra el polvo y agua		& 8 	& 2 	& 16		&	 	&    	& 16   \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -645,17 +645,17 @@ Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplic
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
 
 
-Riesgo 2: se comenzara trabajando con harware ya disponible para poder avanzar mientras se aprueba la compra de los componentes necesarios.
+Riesgo 2: se comenzará trabajando con hardware ya disponible para poder avanzar mientras se aprueba la compra de los componentes necesarios.
 
 \begin{itemize}
 \item Severidad (3*): la demora en la compra de componentes ya no impacta directamente en los tiempos de entrega.
 \item Probabilidad de ocurrencia (5): se mantiene la probabilidad de ocurrencia.
  \end{itemize}
  
-Riesgo 3: se destinara todo el tiempo disponible, palnificaran las tareas y solicitara ayuda en caso de ser necesario.
+Riesgo 3: se destinará todo el tiempo disponible, planificaran las tareas y solicitará ayuda en caso de ser necesario.
 
 \begin{itemize}
-\item Severidad (3*): al obtimizar el tiempo de trabajo se reducen los tiempos de entrega.
+\item Severidad (3*): al optimizar el tiempo de trabajo se reducen los tiempos de entrega.
 \item Probabilidad de ocurrencia (5*): disminuye la probabilidad de ocurrencia.
 \end{itemize}
 
@@ -667,26 +667,26 @@ Riesgo 3: se destinara todo el tiempo disponible, palnificaran las tareas y soli
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-Debe ser capaz de procesar si el paquete es correcto o no sin detener la línea de producción.
+%Debe ser capaz de procesar si el paquete es correcto o no sin detener la línea de producción.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-Para cada uno de los requerimientos del proyecto indique:
+%Para cada uno de los requerimientos del proyecto indique:
 \begin{itemize} 
 \item Req \#1: El dispositivo debe ser capaz de reconocer si la fecha de vencimiento es legible y distinguir entre un paquete mal codificado de uno correcto.
 
 Verificación y validación:
 
 \begin{itemize}
-\item Verificación: se debe observar que el dispositivo identifique que la fecha de vencimiento es ilegible o está mal codificado 
-\item Validación: se colocaran paquetes bien y mal codificados corroborando que estos sean correctamente clasificados, se dejará operativo el sistema por más de 24hs corroborando que funcione correctamente.
+\item Verificación: se debe observar que el dispositivo identifique correctamente paquetes con la fecha de vencimiento ilegible. 
+\item Validación: se colocaran paquetes bien y mal codificados corroborando que estos sean correctamente clasificados, se dejará operativo el sistema por más de 24hs verificando que funcione correctamente.
 
 \end{itemize}
 
 \end{itemize}
 
 \begin{itemize} 
-\item Req \#2: Debe detectar si la fecha de caducidad es la correcta, por ejemplo si el producto tiene un vencimiento de 180 días debe sumarle los días a la fecha actual calcular la nueva fecha y corroborar si es la misma que se está imprimiendo. 
+\item Req \#2: Debe detectar si la fecha de caducidad es la correcta, por ejemplo si el producto tiene un vencimiento de 180 días debe sumarle los días a la fecha actual, calcular la nueva fecha y corroborar que es la que se está imprimiendo. 
 
 Verificación y validación:
 
@@ -699,13 +699,13 @@ Verificación y validación:
 \end{itemize}
 
 \begin{itemize} 
-\item Req \#3: Debe ser capaz de procesar si el paquete es correcto o no sin detener la línea de producción.
+\item Req \#3: Debe ser capaz de procesar si la fecha de vencimiento de cada paquete es correcta, sin detener la línea de producción.
 
 Verificación y validación:
 
 \begin{itemize}
-\item Verificación: Se deben controlar los paquetes a la misma velocidad a la que se producen.
-\item Validación: Se observa que el tiempo de procesamiento de cada paquete sea menor al tiempo de producción del mismo en todos los casos de funcionamiento.
+\item Verificación: Se debe controlar la fecha de vencimiento de los paquetes a la misma velocidad a la que se producen.
+\item Validación: Se observara que el tiempo de procesamiento de cada paquete sea menor al tiempo de producción del mismo en todos los casos de funcionamiento.
 
 \end{itemize}
 
@@ -738,13 +738,18 @@ Presentación de trabajo final	&Director, Jurado				&Exposición del trabajo rea
 \section{15. Gestión de compras}
 \label{sec:compras}
 
-
-\begin{consigna}{red}
-En caso de tener que comprar elementos o contratar servicios:
-a) Explique con qué criterios elegiría a un proveedor.
-b) Redacte el Statement of Work correspondiente.
-\end{consigna}
-
+El proyecto requiere de la adquisición de los siguientes materiales:
+\begin{itemize}
+\item Cámara con una resolución de al menos 720p y una velocidad de captura de
+60fps, preferentemente con el sensor Sony IMX219, con una interfaz de conexión
+serial MIPI.
+\item PC con un procesador con tarjeta gráfica integrada como el AMD Ryzen 5 3400G
+o similar, placa madre ITX compatible con el procesador, 8gb de memoria RAM,
+\item Fuente Evga 500w Reales 80 Plus 500 W o similar.
+\item Router TP-Link Archer C7 o similar.
+\end{itemize}
+Los mismos se pueden conseguir en \textit{www.mercadolibre.com.ar}, \textit{www.tiendavirtual.com} o mediante cualquier proveedor que ofrezca productos con las mismas características. 
+\newpage
 \section{16. Seguimiento y control}
 \label{sec:seguimiento}
 
@@ -809,23 +814,23 @@ Para el cierre del proyecto se contemplan las siguientes actividades:
 
 Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
 \begin{itemize}
-\item Persona a Cargo: \authorname 
+\item Persona a Cargo: \authorname .
 \item Procedimiento: Se analizará:
 \begin{itemize}
-\item El cumplimiento de los requerimientos y cronograma estipulado
-\item El cumplimiento de la cantidad de horas asignadas previamente
-\item El porcentaje de requerimiento cumplido
+\item El cumplimiento de los requerimientos y cronograma estipulado.
+\item El cumplimiento de la cantidad de horas asignadas previamente.
+\item El porcentaje de requerimiento cumplido.
 \end{itemize}
 \end{itemize}
 Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:
 \begin{itemize}
-\item Persona a Cargo: \authorname 
+\item Persona a Cargo: \authorname . 
 \item Procedimiento: Se evaluarán los procedimientos utilizados para alcanzar los objetivos del proyecto, el grado de cumplimiento de los mismos y si fue necesario realizar acciones no planificadas para su cumplimiento.
 \end{itemize}
 Acto de cierre y agradecimiento a todos los interesados y colaboradores:
 \begin{itemize}
-\item Persona a Cargo: \authorname 
-\item Procedimiento: se llevará a cabo un acto de cierre del proyecto en el cual se agradecerá a todas las personas involucradas en él, miembros del jurado, docentes y autoridades de CEIA.
+\item Persona a Cargo: \authorname . 
+\item Procedimiento: se llevará a cabo un acto de cierre del proyecto en el cual se agradecerá a todas las personas involucradas en él, miembros del jurado, docentes y autoridades de la carrera de Especialización en Inteligencia Artificial (CEIA).
 \end{itemize}
 
 
